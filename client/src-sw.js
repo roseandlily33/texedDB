@@ -23,8 +23,56 @@ warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
 });
+offlineFallback({
+  pageFallback: './index.html'
+})
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
+registerRoute(
+  ({ request }) => {
+    console.log(request);
+    return (
+      // CSS
+      request.destination === 'style' ||
+      // JavaScript
+      request.destination === 'script'
+    );
+  },
+  new StaleWhileRevalidate({
+    cacheName: 'static-resources',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
+
+
+
+
+
+
+
 // TODO: Implement asset caching
-registerRoute();
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'my-image-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      }),
+    ],
+  })
+);
+
+
+
+ 
+
