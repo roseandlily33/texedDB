@@ -3,11 +3,11 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+
 const main = document.querySelector('#main');
-main.innerHTML = '';
+main.innerHTML = ``;
 
 const loadSpinner = () => {
-  console.log('Spinner');
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
   spinner.innerHTML = `
