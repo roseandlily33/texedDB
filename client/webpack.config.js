@@ -26,12 +26,19 @@ module.exports = () => {
         short_name: 'JATE',
         description: 'An application to take notes',
         start_url: './',
+        publicPath: './',
         background_color: '#f7e5d2',
         theme_color: '#eb9234',
+        ios: {
+          'apple-mobile-web-app-title': 'AppTitle',
+          'apple-mobile-web-app-status-bar-style': 'black'
+        },
         icons: [
           {
-            src: './src/images/logo.png',
-            sizes: [96, 128, 192, 512]
+            src: path.resolve('./src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+            ios: true,
           }
         ]
       }),
