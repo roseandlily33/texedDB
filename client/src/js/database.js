@@ -12,7 +12,7 @@ const initdb = async () =>
     },
   });
 
-export const putDb = async (content) => {
+export const putDb = async (id, content) => {
   console.log('Putting in the database');
   const db = await openDB('jate', 1);
   const tx = db.transaction('jate', 'readwrite');
