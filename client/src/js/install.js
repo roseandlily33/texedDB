@@ -5,7 +5,7 @@ const butInstall = document.getElementById('buttonInstall');
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     installBtn.style.visibility = 'visible';
-   textHeader.textContent = 'Click the button to install!';
+  // textHeader.textContent = 'Click the button to install!';
    //   window.deferredPrompt = event;
   //  butInstall.classList.toggle('hidden', false);
 
