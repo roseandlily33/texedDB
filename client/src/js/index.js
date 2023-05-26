@@ -3,10 +3,13 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+console.log('One the main index page');
+
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
 const loadSpinner = () => {
+  console.log('Spinner');
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
   spinner.innerHTML = `
