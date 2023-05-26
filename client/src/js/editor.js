@@ -5,6 +5,7 @@ import { header } from './header';
 export default class {
   constructor() {
     const localData = localStorage.getItem('content');
+    console.log('LOCAL DATA', localData)
 
     // check if CodeMirror is loaded
     if (typeof CodeMirror === 'undefined') {
@@ -27,7 +28,7 @@ export default class {
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
       console.log('DATA', data)
-      this.editor.setValue(data || localData || header);
+      this.editor.setValue(data.content || localData || header);
     });
 
     this.editor.on('change', () => {

@@ -3,8 +3,6 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
-console.log('One the main index page');
-
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
