@@ -4,8 +4,12 @@
 Using indexedDB, and webpack, with some starter code. Create a text editor application that can be downloaded onto your desktop, that will store your data that you put into the text editor when you are offline. 
 
 ## Screenshorts:
+<img width="1055" alt="Screenshot 2023-05-27 at 10 37 08 AM" src="https://github.com/roseandlily33/texedDB/assets/109821108/83d2cc2b-36c2-47e5-b20d-dac9255efc56">
+
+<img width="1208" alt="Screenshot 2023-05-27 at 10 56 13 AM" src="https://github.com/roseandlily33/texedDB/assets/109821108/93cc2076-9871-4b36-ade2-6c51bc899e76">
 
 ## Link:
+https://shrouded-plateau-49137.herokuapp.com/
 
 ## Usage
 Clone the repository, and run in the main directory:
