@@ -26,8 +26,8 @@ module.exports = () => {
         description: 'An application to take notes',
         start_url: './',
         publicPath: './',
-        background_color: '#f7e5d2',
-        theme_color: '#eb9234',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         fingerprints: false,
         icons: [
           {
